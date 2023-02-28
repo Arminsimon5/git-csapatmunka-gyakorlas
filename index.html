@@ -5,17 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feladat2</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 50em;
+        }   
+    </style>
 </head>
 <body>
     <h1>Feladat2</h1>
+    <div>
         <label for="oldal1">A háromszög a oldala</label>
         <input type="text" id="oldal1">
+    </div>
+    <div>
         <label for="oldal2">A háromszög b oldala</label>
         <input type="text" id="oldal2">
+    </div>
+    <div>
         <label for="oldal3">A háromszög c oldala</label>
         <input type="text" id="oldal3">
-        <button type="button" onclick="szamol()">gomb</button>
-        <p id="visszajelzes"></p>
+    </div>
+    <div>
+        <button type="button" id="gomb">gomb</button>
+    </div>
+    <div>
+        <table id="tabla">
+            <tr>
+                <th>Terület</th>
+                <th>Kerület</th>
+            </tr>
+
+        </table>
+    </div>
+
     <script>
         document.addEventListener("click",()=>{
             const oldal1=parseFloat(document.getElementById("oldal1").value);
