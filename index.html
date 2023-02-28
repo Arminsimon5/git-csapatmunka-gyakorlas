@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feladat2</title>
+</head>
+<body>
+    <h1>Feladat2</h1>
+        <label for="oldal1">A háromszög a oldala</label>
+        <input type="text" id="oldal1">
+        <label for="oldal2">A háromszög b oldala</label>
+        <input type="text" id="oldal2">
+        <label for="oldal3">A háromszög c oldala</label>
+        <input type="text" id="oldal3">
+        <button type="button" onclick="szamol()">gomb</button>
+        <p id="visszajelzes""></p>
+    <script>
+        document.addEventListener("click",()=>{
+            const oldal1=parseFloat(document.getElementById("oldal1").value);
+            const oldal2=parseFloat(document.getElementById("oldal2").value);
+            const oldal3=parseFloat(document.getElementById("oldal3").value);
+            const kerulet=parseFloat(oldal1 + oldal2 + oldal3);
+            const felKerulet=parseFloat(oldal1 + oldal2 + oldal3)/2;
+            const terulet=parseFloat(Math.sqrt((felKerulet)*(felKerulet-oldal1)*(felKerulet-oldal2)*(felKerulet-oldal3)));
+            document.getElementById("visszajelzes").innerHTML = "Az háromszög kerülete: "+ kerulet + ". A területe: "+ terulet; 
+        })
+
+    </script>
+</body>
+</html>
