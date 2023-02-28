@@ -41,16 +41,16 @@
     </div>
 
     <script>
-        document.addEventListener("click",()=>{
+        document.getElementById("gomb").addEventListener("click", szamol);
+        function szamol() {  
             const oldal1=parseFloat(document.getElementById("oldal1").value);
             const oldal2=parseFloat(document.getElementById("oldal2").value);
             const oldal3=parseFloat(document.getElementById("oldal3").value);
             const kerulet=parseFloat(oldal1 + oldal2 + oldal3);
             const felKerulet=parseFloat(oldal1 + oldal2 + oldal3)/2;
             const terulet=parseFloat(Math.sqrt((felKerulet)*(felKerulet-oldal1)*(felKerulet-oldal2)*(felKerulet-oldal3)));
-            document.getElementById("visszajelzes").innerHTML = "Az háromszög kerülete: "+ kerulet + ". A területe: "+ terulet; 
-        })
-
+            document.getElementById("tabla").innerHTML += "<td>"+kerulet+"</td><td>"+terulet+"</td></tr>";
+        }
     </script>
 </body>
 </html>
